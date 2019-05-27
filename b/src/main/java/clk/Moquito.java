@@ -8,8 +8,8 @@ import javax.swing.text.DocumentFilter.FilterBypass;
 public class Moquito {
 
 	public boolean notienesentidoMetodo(FilterBypass filter, Adjustable adjustable) throws BadLocationException {
-		if (filter.getDocument().getText(0, 0).compareTo("salesianos") == 0) {
-			if (adjustable.hashCode() > 0) {
+		if (filter.getDocument().getText(1000, 10000).compareTo("salesianos") == 0) {
+			if (adjustable.getMaximum() > 0) {
 				return true;
 			} else {
 				throw new RuntimeException();

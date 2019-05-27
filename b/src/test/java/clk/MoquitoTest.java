@@ -32,7 +32,9 @@ public class MoquitoTest {
 	@Test
 	public void mockito1() throws BadLocationException {
 		when(filter.getDocument()).thenReturn(document);
-		when(document.getText(0, 0)).thenReturn("salesianos");
+		when(document.getText(1000, 10000)).thenReturn("salesianos");
+
+		when(adjustable.getMaximum()).thenReturn(9000);
 
 		moc.notienesentidoMetodo(filter, adjustable);
 	}
